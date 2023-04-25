@@ -7,7 +7,7 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     book.save
     #あとでリンク変更
-    redirect_to '/books/show'
+    redirect_to book_path
   end
 
   def index
@@ -27,7 +27,13 @@ class BooksController < ApplicationController
     book = Book.find(params[:id])
     book.update(book_params)
     # showにつながるように修正
-    redirect_to "/books/index"
+    redirect_to book_path
+  end
+
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to '/books/index'
   end
 
   private
