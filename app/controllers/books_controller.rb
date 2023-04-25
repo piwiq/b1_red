@@ -4,10 +4,13 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(book_params)
-    book.save
-    #あとでリンク変更
-    redirect_to book_path
+    @book = Book.new(book_params)
+    if @book.save
+     redirect_to book_path(@book.id)
+    else
+     @books = Book.all
+     render :index
+    end
   end
 
   def index
@@ -26,7 +29,6 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update(book_params)
-    # showにつながるように修正
     redirect_to book_path
   end
 
