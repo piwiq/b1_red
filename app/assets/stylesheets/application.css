@@ -20,7 +20,11 @@
   box-sizing: border-box;
 }
 
-.greeting {
+.head {
   margin: 20px 0 ;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+.body {
+  margin: 33px;
 }
