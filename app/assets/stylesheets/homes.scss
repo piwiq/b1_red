@@ -12,6 +12,7 @@ body {
   margin: 33px;
   line-height: 18px;
   height: auto;
+  font-size: 13px;
 }
 
 .headline {
@@ -22,4 +23,16 @@ body {
 .content {
   margin: 40px;
   font-size: 13px;
+}
+
+table {
+  display: flex;
+}
+
+.book_body, .action {
+  margin-bottom: 10px;
+}
+
+.link {
+
 }
