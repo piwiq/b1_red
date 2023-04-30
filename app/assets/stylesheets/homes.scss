@@ -31,8 +31,10 @@ table {
 
 .book_body, .action {
   margin-bottom: 10px;
+  display: block;
 }
 
-.link {
-
+.show_book {
+  display: flex;
+  margin: 33px;
 }

@@ -1,14 +1,24 @@
 <div><%= flash[:notice] %></div>
 
+<head>
+<%= stylesheet_link_tag 'homes', :media => "all" %>
+</head>
 
+<body>
+<div class="show_book">
 <h5>Title:</h5>
 <%= @book.title %>
+</div>
 
+<div class="show_book">
 <h5>Body:</h5>
 <%= @book.body %>
+</div>
 
 <div>
 <%= link_to 'Edit', edit_book_path(@book.id) %>
 <span>|</span>
 <%= link_to 'Back', index_path %>
 </div>
+
+</body>
