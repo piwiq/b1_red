@@ -1,17 +1,21 @@
 <head>
-<%= stylesheet_link_tag 'homes', :media => "all" %>
+<%= stylesheet_link_tag 'application', :media => "all" %>
 </head>
 
 <body>
 <h1 class="headline">Editing Book</h1>
 
 <% if @book.errors.any? %>
+<div class="error">
+<div class="what_happened">
  <%= pluralize(@book.errors.count, "error") %>  prohibited this book from being saved:
- <ul>
+</div>
+ <ul class="why">
    <% @book.errors.full_messages.each do |message| %>
      <li><%= message %></li>
    <% end %>
  </ul>
+ </div>
 <% end %>
 
 
